@@ -1,7 +1,7 @@
 package com.drl.repository.impl;
 
 import com.drl.pojo.HocKiNamHoc;
-import com.drl.repositories.HocKiNamHocRepository;
+import com.drl.repository.HocKiNamHocRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

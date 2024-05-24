@@ -1,11 +1,10 @@
 package com.drl.repository.impl;
 
 import com.drl.pojo.HoatDong;
-import com.drl.repositories.HoatDongRepository;
+import com.drl.repository.HoatDongRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.Query;
@@ -16,6 +15,7 @@ import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import org.springframework.stereotype.Repository;
 
 @Repository
 @Transactional
@@ -68,7 +68,6 @@ public class HoatDongRepositoryImpl implements HoatDongRepository {
         }
     }
 
-    @Override
     public HoatDong getHoatDongByID(int id) {
         Session session = sessionFactory.getCurrentSession();
         return session.get(HoatDong.class, id);
@@ -79,5 +78,10 @@ public class HoatDongRepositoryImpl implements HoatDongRepository {
         Session session = sessionFactory.getCurrentSession();
         HoatDong h = this.getHoatDongByID(id);
         session.delete(h);
+    }
+
+    @Override
+    public HoatDong getHoatDongByIDd(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

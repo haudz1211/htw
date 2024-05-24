@@ -1,18 +1,19 @@
 package com.drl.repository.impl;
 
 import com.drl.pojo.Khoa;
-import com.drl.repositories.KhoaRepository;
+import com.drl.repository.KhoaRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.Query;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
-@Repository
+
 @Transactional
+@Repository
 public class KhoaRepositoryImpl implements KhoaRepository {
 
     @Autowired
