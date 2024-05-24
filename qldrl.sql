@@ -122,11 +122,11 @@ use qldrl;
 
 
 -- Thêm một hàng mới vào bảng chuyen_vien_ctsv
-INSERT INTO chuyen_vien_ctsv (id) VALUES (NULL);
+-- INSERT INTO chuyen_vien_ctsv (id) VALUES (NULL);
 
 
 -- Thêm dữ liệu vào bảng khoa
-INSERT INTO khoa (ten) VALUES ('Khoa Công nghệ thông tin'), ('Khoa Kinh tế'), ('Khoa Ngoại ngữ');
+-- INSERT INTO khoa (ten) VALUES ('Khoa Công nghệ thông tin'), ('Khoa Kinh tế'), ('Khoa Ngoại ngữ');
 
 -- Thêm dữ liệu vào bảng lop
 -- INSERT INTO lop (ten, khoa_id) VALUES 
@@ -195,11 +195,19 @@ INSERT INTO khoa (ten) VALUES ('Khoa Công nghệ thông tin'), ('Khoa Kinh tế
 
 
 -- Thêm dữ liệu vào bảng sinh_vien_hoat_dong
-INSERT INTO sinh_vien_hoat_dong (trang_thai, hoat_dong_id, sinh_vien_id) VALUES 
-    (TRUE, 1, 1),
-    (TRUE, 2, 2),
-    (TRUE, 3, 3),
-    (FALSE, 4, 4);
+-- INSERT INTO sinh_vien_hoat_dong (trang_thai, hoat_dong_id, sinh_vien_id) VALUES 
+--     (TRUE, 1, 1),
+--     (TRUE, 2, 2),
+--     (TRUE, 3, 3),
+--     (FALSE, 4, 4);
+
+-- Insert data into bai_viet
+INSERT INTO bai_viet (id, ten, ngay_tao, noi_dung, hoat_dong_id) VALUES (1, 'Post 1', NOW(), 'Content 1', 1), (2, 'Post 2', NOW(), 'Content 2', 2);
+
+-- Insert data into comment
+INSERT INTO comment (noi_dung, thoi_gian, bai_viet_id, comment_id, nguoi_dung_id) VALUES
+('Comment 1', NOW(), 1, NULL, 1),
+('Reply to Comment 1', NOW(), 1, 1, 2);
 
 
 

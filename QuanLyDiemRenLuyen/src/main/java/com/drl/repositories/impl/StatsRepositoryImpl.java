@@ -50,7 +50,7 @@ public class StatsRepositoryImpl implements StatsRepository {
         hql.append("    SELECT sv.id, nd.ho, nd.ten, k.ten AS khoa, d.dieu, ");
         hql.append("    CASE WHEN SUM(hd.diem) > d.diemToiDa THEN d.diemToiDa ELSE SUM(hd.diem) END AS diem_tong ");
         hql.append("    FROM SinhVienHoatDong svhd ");
-        hql.append("    JOIN svhd.sinhVienId sv ");//Join sinh vien
+        hql.append("    JOIN svhd.sinhVienId sv ");
         hql.append("    JOIN svhd.hoatDongId hd ");
         hql.append("    JOIN hd.dieuId d ");
         hql.append("    JOIN sv.lopId l ");
@@ -81,7 +81,6 @@ public class StatsRepositoryImpl implements StatsRepository {
         Query<Object[]> query = s.createQuery(hql.toString(), Object[].class);
 
         return query.getResultList();
-
 
     }
 }

@@ -1,2 +1,1 @@
-# htw
-QuanLyDiemRenLuyen
+# QuanLyDiemRenLuyen
